@@ -5,4 +5,14 @@ unzip latest.zip
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
 rm -rf tools-latest latest.zip
-echo "source ~/.local/bin/aliases" >> .bashrc
+
+if grep -R "source ~/.local/bin/aliasess" ".bashrc"
+then 
+  echo 'aliases already installed' 
+else 
+  echo 'aliases not installed'
+  echo "source ~/.local/bin/aliases" >> .bashrc
+  echo 'aliases now installed'
+fi
+  
+
