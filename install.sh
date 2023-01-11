@@ -6,13 +6,15 @@ mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
 rm -rf tools-latest latest.zip
 
-if grep -R "source ~/.local/bin/aliasess" ".bashrc"
+isInFile=$(cat .bashrc | grep -c "source ~/.local/bin/aliases")
+
+if [ $isInFile -eq 0 ] 
 then 
-  echo 'aliases already installed' 
-else 
   echo 'aliases not installed'
   echo "source ~/.local/bin/aliases" >> .bashrc
   echo 'aliases now installed'
+else 
+  echo 'aliases already installed' 
 fi
   
 
