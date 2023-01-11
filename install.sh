@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curl -L -o latest.tar.gz https://github.com/provoke/tools/archive/refs/tags/latest.tar.gz
-tar -xvf latest.zip
+tar -xvf latest.tar.gz
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
 rm -rf tools-latest latest.tar.gz
