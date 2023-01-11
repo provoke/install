@@ -7,6 +7,7 @@ mv tools-latest/* .local/bin/.
 rm -rf tools-latest latest.zip
 
 isInFile=$(cat .bashrc | grep -c "source ~/.local/bin/aliases")
+echo $isInFile
 
 if [ $isInFile -eq 0 ] 
 then 
