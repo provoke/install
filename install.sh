@@ -4,7 +4,7 @@ curl -L -o latest.zip https://github.com/provoke/tools/archive/refs/tags/latest.
 tar -xvf latest.zip
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
-rm -rf tools-latest latest.zip
+rm -rf tools-latest latest.tar.gz
 
 isInFile=$(cat .bashrc | grep -c "source ~/.local/bin/aliases")
 echo $isInFile
