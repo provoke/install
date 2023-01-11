@@ -18,4 +18,5 @@ else
   echo 'aliases already installed' 
 fi
   
+source ~/.bashrc
 
