@@ -4,6 +4,7 @@ curl -L -o latest.tar.gz https://github.com/provoke/tools/archive/refs/tags/late
 tar -xvf latest.tar.gz
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
+mv .local/bin/tmux.conf .tmux.conf
 rm -rf tools-latest latest.tar.gz
 
 isInFile=$(cat .bashrc | grep -c "source ~/.local/bin/aliases")
