@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -L -o latest.tar.gz https://github.com/provoke/tools/archive/refs/tags/latest.tar.gz
+curl -L -o latest.tar.gz https://github.com/provoke/tools/zipball/master
 tar -xvf latest.tar.gz
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
