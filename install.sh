@@ -1,7 +1,8 @@
 #!/bin/bash
 
-curl -L -o latest.tar.gz https://github.com/provoke/tools/zipball/master
-tar -xvf latest.tar.gz
+curl -L -o latest.tar.gz https://github.com/provoke/tools/tarball/master
+mkdir tools-latest
+tar -xvf latest.tar.gz --strip-components=1 -C tools-latest
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
 mv .local/bin/tmux.conf .tmux.conf
