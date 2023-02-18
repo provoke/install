@@ -1,11 +1,19 @@
 #!/bin/bash
 
+#download
 curl -L -o latest.tar.gz https://github.com/provoke/tools/tarball/master
 mkdir tools-latest
 tar -xvf latest.tar.gz --strip-components=1 -C tools-latest
+
+#place
 mkdir -p .local/bin
 mv tools-latest/* .local/bin/.
+
+#tmux
+rm .tmux.conf
 mv .local/bin/tmux.conf .tmux.conf
+
+#cleanup
 rm -rf tools-latest latest.tar.gz
 
 isInFile=$(cat .bashrc | grep -c "source ~/.local/bin/aliases")
